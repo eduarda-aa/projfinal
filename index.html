@@ -182,8 +182,8 @@
   <button class="confira-btn" data-target="textoSeries">Confira aqui</button>
   <div class="textoConfira" id="textoSeries">
     Maratone minhas séries comfort — perfeitas para relaxar e dar boas risadas:<br><br>
-    • <a href="https://www.disneyplus.com/series/modern-family/xyz" target="_blank" rel="noopener noreferrer">Modern Family - Disney+</a><br>
     • <a href="https://www.netflix.com/title/80234825" target="_blank" rel="noopener noreferrer">How I Met Your Mother - Netflix</a><br>
+    • <a href="https://www.disneyplus.com/series/modern-family/xyz" target="_blank" rel="noopener noreferrer">Modern Family - Disney+</a><br>
   </div>
 </div>
 
@@ -209,4 +209,21 @@
       textoExtra.style.display = 'block';
       verMaisBtn.textContent = 'Ver menos';
     } else {
+      textoExtra.style.display = 'none';
+      verMaisBtn.textContent = 'Ver mais';
+    }
+  });
+
+  // Mostrar/esconder textos dos botões confira aqui
+  const buttons = document.querySelectorAll('.confira-btn');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const targetDiv = document.getElementById(targetId);
+      if (targetDiv.style.display === 'block') {
+        targetDiv.style.display = 'none';
+      } else {
+        // Fecha todos os textos antes de abrir um
+        document.querySelectorAll('.textoConfira').forEach(div => div.style.display = 'none');
+        targetDiv.style.display = 'block';
      
