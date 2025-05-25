@@ -205,23 +205,43 @@
 </footer>
 
 <script>
-  // Mostrar/esconder texto do subtítulo
+  // Toggle "Ver mais" texto extra
   const verMaisBtn = document.getElementById('verMaisBtn');
   const textoExtra = document.getElementById('textoExtra');
   verMaisBtn.addEventListener('click', () => {
-    if (textoExtra.style.display === 'none' || textoExtra.style.display === '') {
-      textoExtra.style.display = 'block';
-      verMaisBtn.textContent = 'Ver menos';
-    } else {
+    if (textoExtra.style.display === 'block') {
       textoExtra.style.display = 'none';
       verMaisBtn.textContent = 'Ver mais';
+    } else {
+      textoExtra.style.display = 'block';
+      verMaisBtn.textContent = 'Ver menos';
     }
   });
 
-  // Mostrar/esconder textos dos botões "Confira aqui"
+  // Toggle textos dos botões "Confira aqui"
   const botoesConfira = document.querySelectorAll('.confira-btn');
 
   botoesConfira.forEach(botao => {
     botao.addEventListener('click', () => {
       const idTexto = botao.getAttribute('data-target');
-      const texto =
+      const texto = document.getElementById(idTexto);
+
+      // Fecha todos os outros textos
+      document.querySelectorAll('.textoConfira').forEach(div => {
+        if (div !== texto) div.style.display = 'none';
+      });
+
+      // Toggle do texto clicado
+      if (texto.style.display === 'block') {
+        texto.style.display = 'none';
+      } else {
+        texto.style.display = 'block';
+        // Scroll suave até o texto aberto
+        texto.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
