@@ -157,15 +157,17 @@
   Sou uma estudante, apaixonada por livros, filmes e séries. Estou sempre em busca de aprender coisas novas e me envolver. Criar esse Portfólio foi uma forma divertida de mostrar um pouco sobre mim.
 </div>
 
+<!-- Livro -->
 <div class="image-container">
   <img src="livro.png" alt="Meu Livro Favorito" />
   <button class="confira-btn" data-target="textoLivro">Confira aqui</button>
   <div class="textoConfira" id="textoLivro">
-    Aqui você pode adquiri o meu livro favorito:<br><br>
+    Aqui você pode adquirir o meu livro favorito:<br><br>
     • <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener noreferrer">Melhor do que nos filmes - Amazon</a><br>
   </div>
 </div>
 
+<!-- Filmes -->
 <div class="image-container">
   <img src="filmes.png" alt="Filmes Favoritos" />
   <button class="confira-btn" data-target="textoFilmes">Confira aqui</button>
@@ -177,6 +179,7 @@
   </div>
 </div>
 
+<!-- Séries -->
 <div class="image-container">
   <img src="series.png" alt="Séries Favoritas" />
   <button class="confira-btn" data-target="textoSeries">Confira aqui</button>
@@ -187,6 +190,7 @@
   </div>
 </div>
 
+<!-- Projeto -->
 <div class="image-container">
   <img src="projeto.png" alt="Meu Projeto" />
   <button class="confira-btn" data-target="textoProjeto">Confira aqui</button>
@@ -214,16 +218,10 @@
     }
   });
 
-  // Mostrar/esconder textos dos botões confira aqui
-  const buttons = document.querySelectorAll('.confira-btn');
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetId = button.getAttribute('data-target');
-      const targetDiv = document.getElementById(targetId);
-      if (targetDiv.style.display === 'block') {
-        targetDiv.style.display = 'none';
-      } else {
-        // Fecha todos os textos antes de abrir um
-        document.querySelectorAll('.textoConfira').forEach(div => div.style.display = 'none');
-        targetDiv.style.display = 'block';
-     
+  // Mostrar/esconder textos dos botões "Confira aqui"
+  const botoesConfira = document.querySelectorAll('.confira-btn');
+
+  botoesConfira.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const idTexto = botao.getAttribute('data-target');
+      const texto =
