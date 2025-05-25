@@ -74,11 +74,27 @@
       cursor: pointer;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       transition: transform 0.3s ease;
     }
     img:hover {
       transform: scale(1.05);
+    }
+
+    button.show-links-btn {
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      margin-bottom: 15px;
+    }
+    button.show-links-btn:hover {
+      background-color: #a82b54;
     }
 
     footer {
@@ -116,45 +132,62 @@
 
 <header>Portfólio Eduarda</header>
 
-<!-- SUBTÍTULO E BOTÃO VER MAIS -->
+<!-- SUBTÍTULO E BOTÃO CONFIRA AQUI -->
 <div id="subtitulo">Estudante do Ensino Médio</div>
-<button id="verMaisBtn">Ver mais</button>
+<button id="verMaisBtn">Confira aqui</button>
 <div id="textoExtra">
   Sou uma estudante, apaixonada por livros, filmes e séries. Estou sempre em busca de aprender coisas novas e me envolver. Criar esse Portfólio foi uma forma divertida de mostrar um pouco sobre mim.
 </div>
 
-<!-- Imagem Livro -->
+<!-- Livro favorito -->
 <div class="image-container">
-  <img src="livro.png" usemap="#map-livro" alt="Meu Livro Favorito" />
-  <map name="map-livro">
-    <area href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" alt="Comprar livro" title="Comprar livro" coords="0,0,952,1070" shape="rect" target="_blank" />
-  </map>
+  <img src="livro.png" alt="Meu Livro Favorito" />
+  <p style="text-align:center; color:#d6336c; font-weight:600; font-size:1.2rem; margin-top:-10px;">
+    Quer conhecer meu livro favorito? Aqui está o link para comprar e se apaixonar também!
+  </p>
+  <button class="show-links-btn" onclick="toggleLinks('livroLinks')">Mostrar link</button>
+  <div id="livroLinks" style="display:none; text-align:center; margin-top:10px; font-size:1rem;">
+    <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener noreferrer" style="color:#d6336c; text-decoration:none; font-weight:600;">Comprar livro "Melhor do que nos filmes"</a>
+  </div>
 </div>
 
-<!-- Imagem Filmes -->
+<!-- Filmes favoritos -->
 <div class="image-container">
-  <img src="filmes.png" usemap="#map-filmes" alt="Filmes Favoritos" />
-  <map name="map-filmes">
-    <area href="https://www.disneyplus.com/pt-br/series/10-coisas-que-odeio-em-voce/xyz123" alt="10 Coisas que Odeio em Você" title="10 Coisas que Odeio em Você" coords="100,170,494,779" shape="rect" target="_blank" />
-    <area href="https://www.netflix.com/br/title/80203147" alt="Para Todos os Garotos que Já Amei" title="Para Todos os Garotos que Já Amei" coords="732,175,1110,762" shape="rect" target="_blank" />
-    <area href="https://www.netflix.com/br/title/60033311" alt="Como se Fosse a Primeira Vez" title="Como se Fosse a Primeira Vez" coords="1340,188,1740,780" shape="rect" target="_blank" />
-  </map>
+  <img src="filmes.png" alt="Filmes Favoritos" />
+  <p style="text-align:center; color:#d6336c; font-weight:600; font-size:1.2rem; margin-top:-10px;">
+    Aqui estão os links desses filmes incríveis para assistir e se divertir muito:
+  </p>
+  <button class="show-links-btn" onclick="toggleLinks('filmesLinks')">Mostrar links</button>
+  <div id="filmesLinks" style="display:none; text-align:center; margin-top:10px; font-size:1rem;">
+    <ul style="list-style:none; padding:0;">
+      <li><a href="https://www.disneyplus.com/pt-br/series/10-coisas-que-odeio-em-voce/xyz123" target="_blank" rel="noopener noreferrer" style="color:#d6336c; text-decoration:none;">10 Coisas que Odeio em Você</a></li>
+      <li><a href="https://www.netflix.com/br/title/80203147" target="_blank" rel="noopener noreferrer" style="color:#d6336c; text-decoration:none;">Para Todos os Garotos que Já Amei</a></li>
+      <li><a href="https://www.netflix.com/br/title/60033311" target="_blank" rel="noopener noreferrer" style="color:#d6336c; text-decoration:none;">Como se Fosse a Primeira Vez</a></li>
+    </ul>
+  </div>
 </div>
 
-<!-- Imagem Séries -->
+<!-- Séries favoritas -->
 <div class="image-container">
-  <img src="series.png" usemap="#map-series" alt="Séries Favoritas" />
-  <map name="map-series">
-    <area href="https://www.disneyplus.com/pt-br/browse/entity-943f5577-caad-4e34-a8d3-4a9a816d078a" alt="Séries Favoritas" title="Séries Favoritas" coords="1283,204,1681,790" shape="rect" target="_blank" />
-  </map>
+  <img src="series.png" alt="Séries Favoritas" />
+  <p style="text-align:center; color:#d6336c; font-weight:600; font-size:1.2rem; margin-top:-10px;">
+    Maratone minhas séries comfort — perfeitas para relaxar e dar boas risadas.
+  </p>
+  <button class="show-links-btn" onclick="toggleLinks('seriesLinks')">Mostrar links</button>
+  <div id="seriesLinks" style="display:none; text-align:center; margin-top:10px; font-size:1rem;">
+    <ul style="list-style:none; padding:0;">
+      <li><a href="https://www.disneyplus.com/pt-br/browse/entity-943f5577-caad-4e34-a8d3-4a9a816d078a" target="_blank" rel="noopener noreferrer" style="color:#d6336c; text-decoration:none;">Séries Favoritas</a></li>
+    </ul>
+  </div>
 </div>
 
-<!-- Imagem Projeto -->
+<!-- Projeto -->
 <div class="image-container">
-  <img src="projeto.png" usemap="#map-projeto" alt="Meu Projeto" />
-  <map name="map-projeto">
-    <area href="https://eduarda-aa.github.io/projaula5/" alt="Projeto" title="Projeto" coords="0,0,1295,1371" shape="rect" target="_blank" />
-  </map>
+  <img src="projeto.png" alt="Meu Projeto" />
+  <p style="text-align:center; color:#d6336c; font-weight:600; font-size:1.2rem; margin-top:-10px;">
+    Quer ver um dos meus projetos? Clique no botão para conferir!
+  </p>
+  <button class="show-links-btn" onclick="window.open('https://eduarda-aa.github.io/projaula5/', '_blank')">Ver projeto</button>
 </div>
 
 <footer>
@@ -162,18 +195,29 @@
 </footer>
 
 <script>
+  // Mostrar/ocultar texto extra com troca do texto do botão
   const btn = document.getElementById('verMaisBtn');
   const texto = document.getElementById('textoExtra');
 
   btn.addEventListener('click', () => {
     if (texto.style.display === 'none' || texto.style.display === '') {
       texto.style.display = 'block';
-      btn.textContent = 'Ver menos';
+      btn.textContent = 'Fechar';
     } else {
       texto.style.display = 'none';
-      btn.textContent = 'Ver mais';
+      btn.textContent = 'Confira aqui';
     }
   });
+
+  // Mostrar/ocultar links dos livros, filmes e séries
+  function toggleLinks(id) {
+    const div = document.getElementById(id);
+    if (div.style.display === "none" || div.style.display === "") {
+      div.style.display = "block";
+    } else {
+      div.style.display = "none";
+    }
+  }
 </script>
 
 </body>
