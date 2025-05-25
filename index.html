@@ -2,154 +2,82 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio Eduarda</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
-
     body {
-      font-family: 'Comic Neue', cursive, sans-serif;
-      background-color: #fff0f6;
+      font-family: Arial, sans-serif;
+      background: #fff0f6;
       color: #333;
-      margin: 0;
-      padding: 0 20px 60px 20px;
-      animation: fadeIn 1.5s ease-in-out;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
     }
-
-    header {
-      text-align: center;
-      margin: 20px 0;
-      font-size: 2.8rem;
+    h1 {
       color: #d6336c;
-      font-weight: 700;
-      letter-spacing: 3px;
+      text-align: center;
       user-select: none;
     }
-
-    /* Subtítulo */
-    #subtitulo {
+    .section {
+      margin-bottom: 40px;
       text-align: center;
-      color: #d6336c;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
       user-select: none;
     }
-
-    /* Botões confira aqui */
-    .confiraBtn {
-      display: block;
-      margin: 0 auto 15px auto;
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
       background-color: #d6336c;
       color: white;
       border: none;
-      border-radius: 25px;
-      padding: 10px 22px;
-      font-size: 1rem;
+      border-radius: 20px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-size: 1rem;
       user-select: none;
-      max-width: 180px;
     }
-    .confiraBtn:hover {
+    button:hover {
       background-color: #a82b54;
     }
-
-    /* Textos extras com links */
-    .textoExtra {
+    .info {
       display: none;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      text-align: center;
-      font-size: 1.1rem;
+      margin-top: 15px;
       color: #5c1a36;
-      line-height: 1.5;
-      user-select: none;
+      font-size: 1.1rem;
+      user-select: text;
     }
-
-    .textoExtra a {
+    .info a {
       color: #d6336c;
       text-decoration: none;
       font-weight: 600;
     }
-    .textoExtra a:hover {
+    .info a:hover {
       text-decoration: underline;
-    }
-
-    .image-container {
-      max-width: 900px;
-      margin: 20px auto;
-      text-align: center;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
-      margin-bottom: 15px;
-      transition: transform 0.3s ease;
-      user-select: none;
-    }
-    img:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #d6336c;
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      user-select: none;
-    }
-
-    footer span {
-      color: #ff79c6;
-      font-size: 1.3rem;
-      vertical-align: middle;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 2rem;
-      }
-      footer {
-        font-size: 1rem;
-      }
-      .confiraBtn {
-        max-width: 100%;
-      }
     }
   </style>
 </head>
 <body>
 
-<header>Portfólio Eduarda</header>
+<h1>Portfólio Eduarda</h1>
 
-<div id="subtitulo">Estudante do Ensino Médio</div>
-
-<!-- Livro Favorito -->
-<div class="image-container">
+<div class="section" id="livro">
   <img src="livro.png" alt="Meu Livro Favorito" />
-  <button class="confiraBtn" data-target="textoLivro">Confira aqui</button>
-  <div id="textoLivro" class="textoExtra">
+  <br />
+  <button onclick="toggleInfo('infoLivro', this)">Confira aqui</button>
+  <div class="info" id="infoLivro">
     Aqui está o link para adquirir meu livro favorito:<br />
     <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener noreferrer">Comprar "Melhor do que nos filmes"</a>
   </div>
 </div>
 
-<!-- Filmes Favoritos -->
-<div class="image-container">
+<div class="section" id="filmes">
   <img src="filmes.png" alt="Filmes Favoritos" />
-  <button class="confiraBtn" data-target="textoFilmes">Confira aqui</button>
-  <div id="textoFilmes" class="textoExtra">
+  <br />
+  <button onclick="toggleInfo('infoFilmes', this)">Confira aqui</button>
+  <div class="info" id="infoFilmes">
     Aqui estão os links desses filmes incríveis para assistir e se divertir muito:<br />
     <a href="https://www.disneyplus.com/pt-br/series/10-coisas-que-odeio-em-voce/xyz123" target="_blank" rel="noopener noreferrer">10 Coisas que Eu Odeio em Você (Disney+)</a><br />
     <a href="https://www.netflix.com/br/title/80203147" target="_blank" rel="noopener noreferrer">Para Todos os Garotos que Já Amei (Netflix)</a><br />
@@ -157,50 +85,42 @@
   </div>
 </div>
 
-<!-- Séries Favoritas -->
-<div class="image-container">
+<div class="section" id="series">
   <img src="series.png" alt="Séries Favoritas" />
-  <button class="confiraBtn" data-target="textoSeries">Confira aqui</button>
-  <div id="textoSeries" class="textoExtra">
+  <br />
+  <button onclick="toggleInfo('infoSeries', this)">Confira aqui</button>
+  <div class="info" id="infoSeries">
     Maratone minhas “séries comfort” — perfeitas para relaxar e dar boas risadas:<br />
     <a href="https://www.disneyplus.com/pt-br/browse/entity-943f5577-caad-4e34-a8d3-4a9a816d078a" target="_blank" rel="noopener noreferrer">Séries Disney+</a>
   </div>
 </div>
 
-<!-- Projeto -->
-<div class="image-container">
+<div class="section" id="projeto">
   <img src="projeto.png" alt="Meu Projeto" />
-  <button class="confiraBtn" data-target="textoProjeto">Confira aqui</button>
-  <div id="textoProjeto" class="textoExtra">
+  <br />
+  <button onclick="toggleInfo('infoProjeto', this)">Confira aqui</button>
+  <div class="info" id="infoProjeto">
     Veja meu projeto final clicando no link abaixo:<br />
     <a href="https://eduarda-aa.github.io/projaula5/" target="_blank" rel="noopener noreferrer">Projeto Aula 5</a>
   </div>
 </div>
 
-<footer>
-  © Copyright 2025. Feito por Eduarda <span>🩷</span>
-</footer>
-
 <script>
-  // Função para mostrar/ocultar textos ao clicar nos botões
-  document.querySelectorAll('.confiraBtn').forEach(button => {
-    button.addEventListener('click', () => {
-      const targetId = button.getAttribute('data-target');
-      const texto = document.getElementById(targetId);
-      if (texto.style.display === 'block') {
-        texto.style.display = 'none';
-        button.textContent = 'Confira aqui';
-      } else {
-        // Esconde todos os textos antes de mostrar o atual
-        document.querySelectorAll('.textoExtra').forEach(el => el.style.display = 'none');
-        // Reset texto dos botões
-        document.querySelectorAll('.confiraBtn').forEach(btn => btn.textContent = 'Confira aqui');
-        // Mostra o texto e altera o botão atual
-        texto.style.display = 'block';
-        button.textContent = 'Fechar';
-      }
-    });
-  });
+  function toggleInfo(id, btn) {
+    const info = document.getElementById(id);
+    if (info.style.display === "block") {
+      info.style.display = "none";
+      btn.textContent = "Confira aqui";
+    } else {
+      // Fecha todas as outras infos abertas
+      document.querySelectorAll('.info').forEach(div => div.style.display = 'none');
+      // Reseta texto de todos os botões
+      document.querySelectorAll('button').forEach(button => button.textContent = "Confira aqui");
+      // Abre o atual
+      info.style.display = "block";
+      btn.textContent = "Fechar";
+    }
+  }
 </script>
 
 </body>
