@@ -1,119 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio Eduarda</title>
-    <style>
-        body {
-            background-color: #ffdbe0;
-            font-family: Arial, sans-serif;
-            color: #ff4c7c;
-            text-align: center;
-            padding: 30px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio Eduarda</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
-        h1 {
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+    body {
+      font-family: 'Comic Neue', cursive, sans-serif;
+      background-color: #fff0f6;
+      color: #333;
+      margin: 0;
+      padding: 0 20px 60px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
 
-        h2 {
-            font-size: 28px;
-            margin-top: 40px;
-        }
+    header {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2.8rem;
+      color: #d6336c;
+      font-weight: 700;
+      letter-spacing: 3px;
+      user-select: none;
+    }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+    /* NOVO: subtítulo e botão */
+    #subtitulo {
+      text-align: center;
+      color: #d6336c;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
 
-        .hidden-text {
-            display: none;
-            margin-top: 10px;
-            font-size: 18px;
-        }
+    #verMaisBtn {
+      display: block;
+      margin: 0 auto 20px auto;
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    #verMaisBtn:hover {
+      background-color: #a82b54;
+    }
 
-        button {
-            background-color: #ff4c7c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-bottom: 30px;
-        }
+    #textoExtra {
+      display: none;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #5c1a36;
+      line-height: 1.5;
+      user-select: none;
+    }
 
-        button:hover {
-            background-color: #ff0055;
-        }
+    .image-container {
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: center;
+    }
 
-        img {
-            width: 70%;
-            max-width: 600px;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0 0 15px #ff90a0;
-        }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
 
-        a {
-            display: block;
-            margin-top: 10px;
-            font-size: 18px;
-            color: #ff4c7c;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    footer {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #d6336c;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      user-select: none;
+    }
 
-        a:hover {
-            color: #ff0055;
-            text-decoration: underline;
-        }
-    </style>
-    <script>
-        function mostrarTexto() {
-            const texto = document.getElementById("textoOculto");
-            texto.style.display = texto.style.display === "none" ? "block" : "none";
-        }
-    </script>
+    footer span {
+      color: #ff79c6;
+      font-size: 1.3rem;
+      vertical-align: middle;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 2rem;
+      }
+      footer {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Portfólio Eduarda</h1>
-    <p><strong>Sou Estudante</strong></p>
-    <button onclick="mostrarTexto()">Ver mais</button>
-    <p class="hidden-text" id="textoOculto">
-        Sou estudante apaixonada por livros, filmes e séries. Estou sempre em busca de aprender coisas novas e me desenvolver.
-        Criar esse portfólio foi uma forma divertida de mostrar um pouco sobre mim!
-    </p>
+<header>Portfólio Eduarda</header>
 
-    <h2>📖 Meu livro favorito</h2>
-    <img src="img/livro.png" alt="Livro favorito">
-    <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank">
-        Clique aqui para ver o livro na Amazon
-    </a>
+<!-- SUBTÍTULO E BOTÃO VER MAIS -->
+<div id="subtitulo">Sou estudante</div>
+<button id="verMaisBtn">Ver mais</button>
+<div id="textoExtra">
+  Sou estudante, apaixonada por livros, filmes e séries. Estou sempre em busca de aprender coisas novas e me envolver. Criar esse Portfólio foi uma forma divertida de mostrar um pouco sobre mim.
+</div>
 
-    <h2>🎬 Meus filmes de romance favoritos</h2>
-    <img src="img/filmes.png" alt="Filmes favoritos">
-    <a href="https://www.adorocinema.com/filmes/filme-25933/" target="_blank">
-        10 Coisas que Eu Odeio em Você
-    </a>
-    <a href="https://www.adorocinema.com/filmes/filme-259268/" target="_blank">
-        Para Todos os Garotos que Já Amei
-    </a>
-    <a href="https://www.adorocinema.com/filmes/filme-46665/" target="_blank">
-        Como se Fosse a Primeira Vez
-    </a>
+<div class="image-container">
+  <img src="livro.png" usemap="#map-livro" alt="Meu Livro Favorito" />
+  <map name="map-livro">
+    <area href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" alt="Comprar livro" title="Comprar livro" coords="78,291,538,989" shape="rect" target="_blank" />
+  </map>
+</div>
 
-    <h2>📺 Minhas séries favoritas de comédia</h2>
-    <img src="img/serie.png" alt="Séries favoritas">
-    <a href="https://www.adorocinema.com/series/serie-134/" target="_blank">
-        How I Met Your Mother
-    </a>
-    <a href="https://www.adorocinema.com/series/serie-4432/" target="_blank">
-        Modern Family
-    </a>
+<div class="image-container">
+  <img src="filmes.png" usemap="#map-filmes" alt="Filmes Favoritos" />
+  <map name="map-filmes">
+    <area href="https://www.disneyplus.com/pt-br/series/10-coisas-que-odeio-em-voce/xyz123" alt="10 Coisas que Odeio em Você" title="10 Coisas que Odeio em Você" coords="100,170,494,779" shape="rect" target="_blank" />
+    <area href="https://www.netflix.com/br/title/80203147" alt="Para Todos os Garotos que Já Amei" title="Para Todos os Garotos que Já Amei" coords="732,175,1110,762" shape="rect" target="_blank" />
+    <area href="https://www.netflix.com/br/title/60033311" alt="Como se Fosse a Primeira Vez" title="Como se Fosse a Primeira Vez" coords="1340,188,1740,780" shape="rect" target="_blank" />
+  </map>
+</div>
+
+<div class="image-container">
+  <img src="series.png" usemap="#map-series" alt="Séries Favoritas" />
+  <map name="map-series">
+    <area href="https://www.disneyplus.com/pt-br/series/how-i-met-your-mother/3kpBeRQiKjkq" alt="How I Met Your Mother" title="How I Met Your Mother" coords="239,206,640,790" shape="rect" target="_blank" />
+    <area href="https://www.disneyplus.com/pt-br/series/modern-family/6p2yzz9mh8Kp" alt="Modern Family" title="Modern Family" coords="1282,203,1681,784" shape="rect" target="_blank" />
+  </map>
+</div>
+
+<div class="image-container">
+  <img src="projeto.png" usemap="#map-projeto" alt="Meu Projeto" />
+  <map name="map-projeto">
+    <area href="https://eduarda-aa.github.io/projaula5/" alt="Projeto" title="Projeto" coords="0,0,1295,1371" shape="rect" target="_blank" />
+  </map>
+</div>
+
+<footer>
+  © Copyright 2025. Feito por Eduarda <span>🩷</span>
+</footer>
+
+<script>
+  const btn = document.getElementById('verMaisBtn');
+  const texto = document.getElementById('textoExtra');
+
+  btn.addEventListener('click', () => {
+    if (texto.style.display === 'none' || texto.style.display === '') {
+      texto.style.display = 'block';
+      btn.textContent = 'Ver menos';
+    } else {
+      texto.style.display = 'none';
+      btn.textContent = 'Ver mais';
+    }
+  });
+</script>
 
 </body>
 </html>
