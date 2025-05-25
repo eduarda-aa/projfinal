@@ -26,7 +26,6 @@
       user-select: none;
     }
 
-    /* Subtítulo */
     #subtitulo {
       text-align: center;
       color: #d6336c;
@@ -36,10 +35,9 @@
       user-select: none;
     }
 
-    /* Botões "Confira aqui" */
-    .btn-confira {
+    #verMaisBtn {
       display: block;
-      margin: 10px auto 20px auto;
+      margin: 0 auto 20px auto;
       background-color: #d6336c;
       color: white;
       border: none;
@@ -49,18 +47,15 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       user-select: none;
-      max-width: 200px;
-      text-align: center;
     }
-    .btn-confira:hover {
+    #verMaisBtn:hover {
       background-color: #a82b54;
     }
 
-    /* Texto oculto */
-    .texto-links {
+    #textoExtra {
       display: none;
-      max-width: 700px;
-      margin: 0 auto 40px auto;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
       text-align: center;
       font-size: 1.1rem;
       color: #5c1a36;
@@ -77,15 +72,48 @@
     img {
       max-width: 100%;
       height: auto;
+      cursor: pointer;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
       margin-bottom: 10px;
       transition: transform 0.3s ease;
-      cursor: default;
     }
     img:hover {
       transform: scale(1.05);
+    }
+
+    .confira-btn {
+      display: block;
+      margin: 10px auto 20px auto;
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 18px;
+      font-size: 1rem;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      max-width: 200px;
+      text-align: center;
+    }
+    .confira-btn:hover {
+      background-color: #a82b54;
+    }
+
+    .textoConfira {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      font-size: 1rem;
+      color: #5c1a36;
+      line-height: 1.5;
+      user-select: none;
+      text-align: left;
+      background-color: #fff4f8;
+      border-radius: 10px;
+      padding: 15px 20px;
+      box-shadow: 0 0 10px rgba(214, 51, 108, 0.2);
     }
 
     footer {
@@ -122,52 +150,52 @@
 <body>
 
 <header>Portfólio Eduarda</header>
-<div id="subtitulo">Estudante do Ensino Médio</div>
 
-<!-- LIVRO -->
+<div id="subtitulo">Estudante do Ensino Médio</div>
+<button id="verMaisBtn">Ver mais</button>
+<div id="textoExtra">
+  Sou uma estudante, apaixonada por livros, filmes e séries. Estou sempre em busca de aprender coisas novas e me envolver. Criar esse Portfólio foi uma forma divertida de mostrar um pouco sobre mim.
+</div>
+
 <div class="image-container">
   <img src="livro.png" alt="Meu Livro Favorito" />
-  <button class="btn-confira" data-target="textoLivro">Confira aqui</button>
-  <div class="texto-links" id="textoLivro">
-    Aqui estão alguns lugares onde você pode encontrar meu livro favorito para ler e se apaixonar: <br />
-    <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener noreferrer">Amazon - Melhor do que nos filmes</a>
+  <button class="confira-btn" data-target="textoLivro">Confira aqui</button>
+  <div class="textoConfira" id="textoLivro">
+    Aqui estão alguns lugares onde você pode desfrutar e ouvir meus livros favoritos:<br><br>
+    • <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener noreferrer">Melhor do que nos filmes - Amazon</a><br>
+    • <a href="https://www.skoob.com.br/livro/123456" target="_blank" rel="noopener noreferrer">Skoob - Minha biblioteca</a><br>
+    • <a href="https://www.audible.com.br" target="_blank" rel="noopener noreferrer">Audible - Audiobooks</a>
   </div>
 </div>
 
-<!-- FILMES -->
 <div class="image-container">
   <img src="filmes.png" alt="Filmes Favoritos" />
-  <button class="btn-confira" data-target="textoFilmes">Confira aqui</button>
-  <div class="texto-links" id="textoFilmes">
-    Aqui estão os links desses filmes incríveis para assistir e se divertir muito: <br />
-    <a href="https://www.disneyplus.com/pt-br/movies/como-perder-um-homem-em-10-dias/xyz123" target="_blank" rel="noopener noreferrer">Como Perder um Homem em 10 Dias (Disney+)</a><br />
-    <a href="https://www.netflix.com/br/title/80117417" target="_blank" rel="noopener noreferrer">Para Todos os Garotos que Já Amei (Netflix)</a><br />
-    <a href="https://www.netflix.com/br/title/60033311" target="_blank" rel="noopener noreferrer">Como se Fosse a Primeira Vez (Netflix)</a><br />
-    <a href="https://www.disneyplus.com/pt-br/movies/10-coisas-que-eu-odeio-em-voce/xyz123" target="_blank" rel="noopener noreferrer">10 Coisas que Eu Odeio em Você (Disney+)</a>
+  <button class="confira-btn" data-target="textoFilmes">Confira aqui</button>
+  <div class="textoConfira" id="textoFilmes">
+    Aqui estão os links desses filmes incríveis para assistir e se divertir muito:<br><br>
+    • <a href="https://www.disneyplus.com/pt-br/series/10-coisas-que-odeio-em-voce/11u47cAfkqMT" target="_blank" rel="noopener noreferrer">10 Coisas que Odeio em Você - Disney+</a><br>
+    • <a href="https://www.netflix.com/br/title/80203147" target="_blank" rel="noopener noreferrer">Para Todos os Garotos que Já Amei - Netflix</a><br>
+    • <a href="https://www.netflix.com/br/title/60033311" target="_blank" rel="noopener noreferrer">Como se Fosse a Primeira Vez - Netflix</a>
   </div>
 </div>
 
-<!-- SÉRIES -->
 <div class="image-container">
   <img src="series.png" alt="Séries Favoritas" />
-  <button class="btn-confira" data-target="textoSeries">Confira aqui</button>
-  <div class="texto-links" id="textoSeries">
-    Maratone minhas séries comfort — perfeitas para relaxar e dar boas risadas: <br />
-    <a href="https://www.disneyplus.com/series/modern-family/xyz123" target="_blank" rel="noopener noreferrer">Modern Family (Disney+)</a><br />
-    <a href="https://www.disneyplus.com/series/how-i-met-your-mother/xyz123" target="_blank" rel="noopener noreferrer">How I Met Your Mother (Disney+)</a><br />
-    <a href="https://www.netflix.com/title/81289304" target="_blank" rel="noopener noreferrer">Friends (Netflix)</a><br />
-    <a href="https://www.netflix.com/title/80057281" target="_blank" rel="noopener noreferrer">Brooklyn Nine-Nine (Netflix)</a>
+  <button class="confira-btn" data-target="textoSeries">Confira aqui</button>
+  <div class="textoConfira" id="textoSeries">
+    Maratone minhas séries comfort — perfeitas para relaxar e dar boas risadas:<br><br>
+    • <a href="https://www.disneyplus.com/series/modern-family/xyz" target="_blank" rel="noopener noreferrer">Modern Family - Disney+</a><br>
+    • <a href="https://www.netflix.com/title/80234825" target="_blank" rel="noopener noreferrer">How I Met Your Mother - Netflix</a><br>
+    • <a href="https://www.disneyplus.com/series/10-coisas-que-odeio-em-voce/11u47cAfkqMT" target="_blank" rel="noopener noreferrer">10 Coisas que Odeio em Você - Disney+</a>
   </div>
 </div>
 
-<!-- PROJETO -->
 <div class="image-container">
-  <img src="projeto.png" alt="Projeto Aula 5" />
-  <button class="btn-confira" data-target="textoProjeto">Confira aqui</button>
-  <div class="texto-links" id="textoProjeto">
-    Este é meu projeto final da Aula 5, onde aprendi muitas técnicas importantes para montar projetos legais e organizados! <br />
-    Veja o projeto clicando no link abaixo: <br />
-    <a href="https://eduarda-aa.github.io/projaula5/" target="_blank" rel="noopener noreferrer">Projeto Aula 5</a>
+  <img src="projeto.png" alt="Meu Projeto" />
+  <button class="confira-btn" data-target="textoProjeto">Confira aqui</button>
+  <div class="textoConfira" id="textoProjeto">
+    Este é meu Projeto Aula 5, onde aprendi a criar páginas web interativas com HTML, CSS e JavaScript. Foi uma experiência incrível para desenvolver minhas habilidades e criatividade!<br><br>
+    Confira o projeto completo aqui: <a href="https://example.com/meu-projeto-aula5" target="_blank" rel="noopener noreferrer">https://example.com/meu-projeto-aula5</a>
   </div>
 </div>
 
@@ -176,30 +204,12 @@
 </footer>
 
 <script>
-  // Seleciona todos os botões com a classe btn-confira
-  const botoes = document.querySelectorAll('.btn-confira');
-
-  botoes.forEach(botao => {
-    botao.addEventListener('click', () => {
-      const idTexto = botao.getAttribute('data-target');
-      const texto = document.getElementById(idTexto);
-
-      // Toggle display
-      if (texto.style.display === 'block') {
-        texto.style.display = 'none';
-        botao.textContent = 'Confira aqui';
-      } else {
-        // Esconde todos os textos antes de mostrar o clicado
-        document.querySelectorAll('.texto-links').forEach(t => t.style.display = 'none');
-        // Reseta todos os botões
-        botoes.forEach(b => b.textContent = 'Confira aqui');
-
-        texto.style.display = 'block';
-        botao.textContent = 'Fechar';
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
+  // Mostrar/esconder texto do subtítulo
+  const verMaisBtn = document.getElementById('verMaisBtn');
+  const textoExtra = document.getElementById('textoExtra');
+  verMaisBtn.addEventListener('click', () => {
+    if (textoExtra.style.display === 'none' || textoExtra.style.display === '') {
+      textoExtra.style.display = 'block';
+      verMaisBtn.textContent = 'Ver menos';
+    } else {
+     
