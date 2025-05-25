@@ -1,0 +1,73 @@
+/* Fonte fofa */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+  font-family: 'Comic Neue', cursive, sans-serif;
+  background-color: #fff0f6;
+  color: #333;
+  margin: 0;
+  padding: 0 20px 60px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.8rem;
+  color: #d6336c;
+  font-weight: 700;
+  letter-spacing: 3px;
+  user-select: none;
+}
+
+/* Container das imagens */
+.image-container {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #d6336c;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  user-select: none;
+}
+
+footer span {
+  color: #ff79c6;
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  header {
+    font-size: 2rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
