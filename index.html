@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Portfólio Eduarda</title>
     <style>
         body {
@@ -10,47 +10,60 @@
             color: #ff4c7c;
             text-align: center;
             padding: 30px;
-            margin: 0;
         }
 
         h1 {
             font-family: 'Comic Sans MS', cursive;
-            font-size: 30px;
+            font-size: 36px;
             margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 40px;
         }
 
         p {
             font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hidden-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #ff4c7c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
             margin-bottom: 30px;
         }
 
-        section {
-            margin-bottom: 60px;
-            padding: 20px;
-            border-radius: 15px;
-            background: #ffe6ea;
-            box-shadow: 0 0 20px #ff90a0;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        button:hover {
+            background-color: #ff0055;
         }
 
         img {
             width: 70%;
             max-width: 600px;
             border-radius: 10px;
-            margin-top: 30px;
+            margin-top: 20px;
             box-shadow: 0 0 15px #ff90a0;
         }
 
         a {
             display: block;
-            margin-top: 15px;
+            margin-top: 10px;
             font-size: 18px;
             color: #ff4c7c;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
         }
 
         a:hover {
@@ -58,44 +71,49 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        function mostrarTexto() {
+            const texto = document.getElementById("textoOculto");
+            texto.style.display = texto.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
 
-    <section id="livro">
-        <h1>📖 Meu livro favorito</h1>
-        <p>Olá! Eu sou Eduarda, estudante apaixonada por livros, filmes e séries!</p>
-        <img src="img/livro.png" alt="Livro favorito" />
-        <a href="https://www.amazon.com.br/como-eu-era-antes-você/dp/8580576586" target="_blank" rel="noopener noreferrer">
-            Clique aqui para ver o livro na Amazon
-        </a>
-    </section>
+    <h1>Portfólio Eduarda</h1>
+    <p><strong>Sou Estudante</strong></p>
+    <button onclick="mostrarTexto()">Ver mais</button>
+    <p class="hidden-text" id="textoOculto">
+        Sou estudante apaixonada por livros, filmes e séries. Estou sempre em busca de aprender coisas novas e me desenvolver.
+        Criar esse portfólio foi uma forma divertida de mostrar um pouco sobre mim!
+    </p>
 
-    <section id="filmes">
-        <h1>🎬 Meus filmes de romance favoritos</h1>
-        <p>Olá! Eu sou Eduarda, estudante apaixonada por livros, filmes e séries!</p>
-        <img src="img/filmes.png" alt="Filmes favoritos" />
-        <a href="https://www.adorocinema.com/filmes/filme-25933/" target="_blank" rel="noopener noreferrer">
-            10 Coisas que Eu Odeio em Você
-        </a>
-        <a href="https://www.adorocinema.com/filmes/filme-259268/" target="_blank" rel="noopener noreferrer">
-            Para Todos os Garotos que Já Amei
-        </a>
-        <a href="https://www.adorocinema.com/filmes/filme-46665/" target="_blank" rel="noopener noreferrer">
-            Como se Fosse a Primeira Vez
-        </a>
-    </section>
+    <h2>📖 Meu livro favorito</h2>
+    <img src="img/livro.png" alt="Livro favorito">
+    <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank">
+        Clique aqui para ver o livro na Amazon
+    </a>
 
-    <section id="series">
-        <h1>📺 Minhas séries favoritas de comédia</h1>
-        <p>Olá! Eu sou Eduarda, estudante apaixonada por livros, filmes e séries!</p>
-        <img src="img/serie.png" alt="Séries favoritas" />
-        <a href="https://www.adorocinema.com/series/serie-134/" target="_blank" rel="noopener noreferrer">
-            How I Met Your Mother
-        </a>
-        <a href="https://www.adorocinema.com/series/serie-4432/" target="_blank" rel="noopener noreferrer">
-            Modern Family
-        </a>
-    </section>
+    <h2>🎬 Meus filmes de romance favoritos</h2>
+    <img src="img/filmes.png" alt="Filmes favoritos">
+    <a href="https://www.adorocinema.com/filmes/filme-25933/" target="_blank">
+        10 Coisas que Eu Odeio em Você
+    </a>
+    <a href="https://www.adorocinema.com/filmes/filme-259268/" target="_blank">
+        Para Todos os Garotos que Já Amei
+    </a>
+    <a href="https://www.adorocinema.com/filmes/filme-46665/" target="_blank">
+        Como se Fosse a Primeira Vez
+    </a>
+
+    <h2>📺 Minhas séries favoritas de comédia</h2>
+    <img src="img/serie.png" alt="Séries favoritas">
+    <a href="https://www.adorocinema.com/series/serie-134/" target="_blank">
+        How I Met Your Mother
+    </a>
+    <a href="https://www.adorocinema.com/series/serie-4432/" target="_blank">
+        Modern Family
+    </a>
 
 </body>
 </html>
