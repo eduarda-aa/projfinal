@@ -26,7 +26,7 @@
       user-select: none;
     }
 
-    /* Subtítulo e botão */
+    /* Subtítulo */
     #subtitulo {
       text-align: center;
       color: #d6336c;
@@ -36,28 +36,31 @@
       user-select: none;
     }
 
-    button.confiraBtn {
+    /* Botões "Confira aqui" */
+    .btn-confira {
       display: block;
-      margin: 0 auto 15px auto;
+      margin: 10px auto 20px auto;
       background-color: #d6336c;
       color: white;
       border: none;
       border-radius: 25px;
-      padding: 10px 25px;
+      padding: 10px 20px;
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
       user-select: none;
-      width: max-content;
+      max-width: 200px;
+      text-align: center;
     }
-    button.confiraBtn:hover {
+    .btn-confira:hover {
       background-color: #a82b54;
     }
 
-    .textoExtra {
+    /* Texto oculto */
+    .texto-links {
       display: none;
       max-width: 700px;
-      margin: 0 auto 30px auto;
+      margin: 0 auto 40px auto;
       text-align: center;
       font-size: 1.1rem;
       color: #5c1a36;
@@ -78,10 +81,11 @@
       box-shadow: 0 4px 8px rgba(214, 51, 108, 0.3);
       margin-bottom: 10px;
       transition: transform 0.3s ease;
-      user-select: none;
+      cursor: default;
     }
     img:hover {
       transform: scale(1.05);
+      cursor: pointer;
     }
 
     footer {
@@ -118,56 +122,52 @@
 <body>
 
 <header>Portfólio Eduarda</header>
-
 <div id="subtitulo">Estudante do Ensino Médio</div>
 
-<!-- Livros -->
+<!-- LIVRO -->
 <div class="image-container">
   <img src="livro.png" alt="Meu Livro Favorito" />
-  <button class="confiraBtn" data-target="textoLivros">Confira aqui</button>
-  <div id="textoLivros" class="textoExtra">
-    Aqui estão alguns lugares onde você pode desfrutar dos meus livros favoritos. Se quiser conhecer mais sobre eles, basta visitar os links:
-    <ul style="list-style:none; padding-left:0; margin-top:10px;">
-      <li><a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener" style="color:#d6336c; font-weight:bold;">Melhor do que nos filmes - Amazon</a></li>
-      <!-- Você pode adicionar mais links de livros aqui -->
-    </ul>
+  <button class="btn-confira" data-target="textoLivro">Confira aqui</button>
+  <div class="texto-links" id="textoLivro">
+    Aqui estão alguns lugares onde você pode encontrar meu livro favorito para ler e se apaixonar: <br />
+    <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289" target="_blank" rel="noopener noreferrer">Amazon - Melhor do que nos filmes</a>
   </div>
 </div>
 
-<!-- Filmes -->
+<!-- FILMES -->
 <div class="image-container">
   <img src="filmes.png" alt="Filmes Favoritos" />
-  <button class="confiraBtn" data-target="textoFilmes">Confira aqui</button>
-  <div id="textoFilmes" class="textoExtra">
-    Aqui estão os links desses filmes incríveis para assistir e se divertir muito:
-    <ul style="list-style:none; padding-left:0; margin-top:10px;">
-      <li><a href="https://www.disneyplus.com/pt-br/movies/10-coisas-que-eu-odeio-em-voce/1EgR9NrF5a2m" target="_blank" rel="noopener" style="color:#d6336c; font-weight:bold;">10 Coisas que Eu Odeio em Você - Disney+</a></li>
-      <li><a href="https://www.netflix.com/br/title/80203147" target="_blank" rel="noopener" style="color:#d6336c; font-weight:bold;">Para Todos os Garotos que Já Amei - Netflix</a></li>
-      <li><a href="https://www.netflix.com/br/title/60033311" target="_blank" rel="noopener" style="color:#d6336c; font-weight:bold;">Como se Fosse a Primeira Vez - Netflix</a></li>
-    </ul>
+  <button class="btn-confira" data-target="textoFilmes">Confira aqui</button>
+  <div class="texto-links" id="textoFilmes">
+    Aqui estão os links desses filmes incríveis para assistir e se divertir muito: <br />
+    <a href="https://www.disneyplus.com/pt-br/movies/como-perder-um-homem-em-10-dias/xyz123" target="_blank" rel="noopener noreferrer">Como Perder um Homem em 10 Dias (Disney+)</a><br />
+    <a href="https://www.netflix.com/br/title/80117417" target="_blank" rel="noopener noreferrer">Para Todos os Garotos que Já Amei (Netflix)</a><br />
+    <a href="https://www.netflix.com/br/title/60033311" target="_blank" rel="noopener noreferrer">Como se Fosse a Primeira Vez (Netflix)</a><br />
+    <a href="https://www.disneyplus.com/pt-br/movies/10-coisas-que-eu-odeio-em-voce/xyz123" target="_blank" rel="noopener noreferrer">10 Coisas que Eu Odeio em Você (Disney+)</a>
   </div>
 </div>
 
-<!-- Séries -->
+<!-- SÉRIES -->
 <div class="image-container">
   <img src="series.png" alt="Séries Favoritas" />
-  <button class="confiraBtn" data-target="textoSeries">Confira aqui</button>
-  <div id="textoSeries" class="textoExtra">
-    Maratone minhas séries confort — perfeitas para relaxar e dar boas risadas:
-    <ul style="list-style:none; padding-left:0; margin-top:10px;">
-      <li><a href="https://www.disneyplus.com/series/how-i-met-your-mother/4iQXsDUIkLvp" target="_blank" rel="noopener" style="color:#d6336c; font-weight:bold;">How I Met Your Mother - Disney+</a></li>
-      <li><a href="https://www.disneyplus.com/series/modern-family/5kBzOoR9HLFv" target="_blank" rel="noopener" style="color:#d6336c; font-weight:bold;">Modern Family - Disney+</a></li>
-      <!-- Pode adicionar outras séries favoritas aqui -->
-    </ul>
+  <button class="btn-confira" data-target="textoSeries">Confira aqui</button>
+  <div class="texto-links" id="textoSeries">
+    Maratone minhas séries comfort — perfeitas para relaxar e dar boas risadas: <br />
+    <a href="https://www.disneyplus.com/series/modern-family/xyz123" target="_blank" rel="noopener noreferrer">Modern Family (Disney+)</a><br />
+    <a href="https://www.disneyplus.com/series/how-i-met-your-mother/xyz123" target="_blank" rel="noopener noreferrer">How I Met Your Mother (Disney+)</a><br />
+    <a href="https://www.netflix.com/title/81289304" target="_blank" rel="noopener noreferrer">Friends (Netflix)</a><br />
+    <a href="https://www.netflix.com/title/80057281" target="_blank" rel="noopener noreferrer">Brooklyn Nine-Nine (Netflix)</a>
   </div>
 </div>
 
-<!-- Projeto Aula 5 -->
+<!-- PROJETO -->
 <div class="image-container">
   <img src="projeto.png" alt="Projeto Aula 5" />
-  <button class="confiraBtn" data-target="textoProjeto">Confira aqui</button>
-  <div id="textoProjeto" class="textoExtra">
-    Este é o Projeto Aula 5, onde aprendi muito sobre desenvolvimento web, HTML, CSS e JavaScript. Foi uma experiência incrível que me ajudou a criar este portfólio e desenvolver habilidades práticas que adoro aplicar!
+  <button class="btn-confira" data-target="textoProjeto">Confira aqui</button>
+  <div class="texto-links" id="textoProjeto">
+    Este é meu projeto final da Aula 5, onde aprendi muitas técnicas importantes para montar projetos legais e organizados! <br />
+    Veja o projeto clicando no link abaixo: <br />
+    <a href="https://eduarda-aa.github.io/projaula5/" target="_blank" rel="noopener noreferrer">Projeto Aula 5</a>
   </div>
 </div>
 
@@ -176,19 +176,24 @@
 </footer>
 
 <script>
-  const botoes = document.querySelectorAll('button.confiraBtn');
+  // Seleciona todos os botões com a classe btn-confira
+  const botoes = document.querySelectorAll('.btn-confira');
+
   botoes.forEach(botao => {
     botao.addEventListener('click', () => {
       const idTexto = botao.getAttribute('data-target');
       const texto = document.getElementById(idTexto);
+
+      // Toggle display
       if (texto.style.display === 'block') {
         texto.style.display = 'none';
         botao.textContent = 'Confira aqui';
       } else {
-        // Fecha todos os textos antes de abrir o atual
-        document.querySelectorAll('.textoExtra').forEach(t => t.style.display = 'none');
+        // Esconde todos os textos antes de mostrar o clicado
+        document.querySelectorAll('.texto-links').forEach(t => t.style.display = 'none');
         // Reseta todos os botões
         botoes.forEach(b => b.textContent = 'Confira aqui');
+
         texto.style.display = 'block';
         botao.textContent = 'Fechar';
       }
